@@ -62,7 +62,7 @@ class App:
     #タイトル画面処理用update
     def update_title_scene(self):
         #ENTERでゲーム画面に遷移
-        if pyxel.btnp(pyxel.KEY_RETURN) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_A):
+        if pyxel.btnp(pyxel.KEY_RETURN) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP):
             self.scene = SCENE_PLAY
             #BGMをloop再生
             pyxel.playm(GAME_BGM, loop = True)            
@@ -212,4 +212,5 @@ class App:
         pyxel.bltm(0, 0, 2, 0, 0, 256, 256)      
 
 App()
+
 
