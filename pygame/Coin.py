@@ -1,5 +1,4 @@
 import thing
-import random
 from random import randint
 class Coin(thing.thing):
     def __init__(self):
@@ -25,4 +24,5 @@ class Coin(thing.thing):
         if self.position_x < -16 or self.position_y < -16:
             return True
         if (self.falling == True) and (self.position_y>144):
+
             return True
