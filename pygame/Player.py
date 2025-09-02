@@ -1,6 +1,5 @@
 import thing
 import math
-import numpy as np
 import pyxel
 class Player(thing.thing):
     def __init__(self,x,y):
@@ -21,8 +20,8 @@ class Player(thing.thing):
     #回転中
     def rotate(self):
         rad = math.radians(self.rotateCount)
-        self.position_x = self.rotate_x + np.sin(rad)*self.r
-        self.position_y = self.rotate_y + np.cos(rad)*self.r
+        self.position_x = self.rotate_x + math.sin(rad)*self.r
+        self.position_y = self.rotate_y + math.cos(rad)*self.r
         self.rotateCount += self.rotate_distance
     #回転終了
     def endRotate(self):
@@ -52,5 +51,6 @@ class Player(thing.thing):
                 self.startRotate()
         
             
+
 
     
