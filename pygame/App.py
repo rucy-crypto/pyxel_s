@@ -2,9 +2,6 @@ import Player
 import Coin
 import Baloon
 import Bird
-#画面遷移
-import random
-from random import randint
 import pyxel
 
 #画面遷移用の定数
@@ -213,4 +210,5 @@ class App:
     def draw_game_over(self):
         pyxel.cls(12)
         pyxel.bltm(0, 0, 2, 0, 0, 256, 256)      
+
 App()
