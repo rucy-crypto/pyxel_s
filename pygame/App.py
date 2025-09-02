@@ -190,7 +190,7 @@ class App:
         '''コピー先x, コピー先y, イメージバンク番号, イメージバンクx, 
          イメージバンクy, イメージバンク領域x, イメージバンク領域y, 透過する色コード,回転'''   
         #draw player     
-        pyxel.blt(self.player.position_x, self.player.position_y, 0, 32, 0, 16, 16, 12, self.player.rotateCount)
+        pyxel.blt(self.player.position_x, self.player.position_y, 0, 32, 0, 16, 16, 12, -self.player.rotateCount)
 
         # draw coins
         for coin in self.coins:
@@ -212,5 +212,6 @@ class App:
         pyxel.bltm(0, 0, 2, 0, 0, 256, 256)      
 
 App()
+
 
 
